@@ -1,0 +1,268 @@
+{
+  "version": "0.7.1",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": 323.70348837209303,
+          "y": 275.7906976744184
+        },
+        "caption": "Salesperson"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": 271.1162790697675,
+          "y": 79.13372093023247
+        },
+        "caption": "Customer"
+      },
+      {
+        "id": "n2",
+        "position": {
+          "x": 0,
+          "y": 300
+        },
+        "caption": "order"
+      }
+    ],
+    "relationships": []
+  },
+  "dataModel": {
+    "fileModel": {
+      "fileSchemas": {
+        "sales_db_salespeople1.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "snum",
+              "type": "integer",
+              "sample": "1001",
+              "include": true
+            },
+            {
+              "name": "sname",
+              "type": "string",
+              "sample": "Peel",
+              "include": true
+            },
+            {
+              "name": "city",
+              "type": "string",
+              "sample": "London",
+              "include": true
+            },
+            {
+              "name": "comm",
+              "type": "float",
+              "sample": "0.12",
+              "include": true
+            }
+          ]
+        },
+        "sales_db_customers1.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "cnum",
+              "type": "integer",
+              "sample": "2001",
+              "include": true
+            },
+            {
+              "name": "cname",
+              "type": "string",
+              "sample": "Hoffman",
+              "include": true
+            },
+            {
+              "name": "city",
+              "type": "string",
+              "sample": "London",
+              "include": true
+            },
+            {
+              "name": "rating",
+              "type": "string",
+              "sample": "100",
+              "include": true
+            },
+            {
+              "name": "snum",
+              "type": "integer",
+              "sample": "1001",
+              "include": true
+            }
+          ]
+        },
+        "sales_db_orders1.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "onum",
+              "type": "integer",
+              "sample": "3000",
+              "include": true
+            },
+            {
+              "name": "amot",
+              "type": "float",
+              "sample": "1309.95",
+              "include": true
+            },
+            {
+              "name": "odate",
+              "type": "string",
+              "sample": "10/6/2000",
+              "include": true
+            },
+            {
+              "name": "cnum",
+              "type": "integer",
+              "sample": "2004",
+              "include": true
+            },
+            {
+              "name": "snum",
+              "type": "integer",
+              "sample": "1002",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n0": {
+          "label": "Salesperson",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "snam",
+              "type": "string",
+              "identifier": "fHSyH44Aep4gG4Kr64Byq"
+            },
+            {
+              "property": "snum",
+              "type": "integer",
+              "identifier": "sXXtgZB9hn1cgNuZH3ys0"
+            }
+          ],
+          "key": {
+            "properties": [
+              "sXXtgZB9hn1cgNuZH3ys0"
+            ]
+          }
+        },
+        "n1": {
+          "label": "Customer",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "cnum",
+              "type": "integer",
+              "identifier": "jSvVIWAFC7TCOg_muky7D"
+            },
+            {
+              "property": "cname",
+              "type": "string",
+              "identifier": "feMNurhagDEAQrXZkDw92"
+            },
+            {
+              "property": "snum",
+              "type": "integer",
+              "identifier": "K7Rm30pGSOitZewl0ryyF"
+            }
+          ],
+          "key": {
+            "properties": [
+              "jSvVIWAFC7TCOg_muky7D"
+            ]
+          }
+        },
+        "n2": {
+          "label": "order",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "onum",
+              "type": "integer",
+              "identifier": "6SSY1srmB0O70D8IzEf1v"
+            },
+            {
+              "property": "cnum",
+              "type": "integer",
+              "identifier": "CUcZzoH-4UY1xoIGiEAj6"
+            },
+            {
+              "property": "snum",
+              "type": "integer",
+              "identifier": "SDrFZ08-TCYNEXnqd2rKY"
+            }
+          ],
+          "key": {
+            "properties": [
+              "6SSY1srmB0O70D8IzEf1v"
+            ]
+          }
+        }
+      },
+      "relationshipSchemas": {}
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n0": {
+          "nodeSchema": "n0",
+          "fileSchema": "sales_db_salespeople1.csv",
+          "mappings": [
+            {
+              "field": "sname"
+            },
+            {
+              "field": "snum"
+            }
+          ]
+        },
+        "n1": {
+          "nodeSchema": "n1",
+          "fileSchema": "sales_db_customers1.csv",
+          "mappings": [
+            {
+              "field": "cnum"
+            },
+            {
+              "field": "cname"
+            },
+            {
+              "field": "snum"
+            }
+          ]
+        },
+        "n2": {
+          "nodeSchema": "n2",
+          "fileSchema": "sales_db_orders1.csv",
+          "mappings": [
+            {
+              "field": "onum"
+            },
+            {
+              "field": "cnum"
+            },
+            {
+              "field": "snum"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {}
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}
